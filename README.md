@@ -8,7 +8,12 @@ It will run fetcher every 1 minute by default (duration can be override by envir
 
 It starts a http server on :3000 by default (environment variable ADDR for modify).
 
-PRODUCTION environment variable is available for switch off debug logs. 
+PRODUCTION environment variable is available for switch off debug logs.
+
+try it quickly:
+```
+go run main.go
+``` 
 
 ## API
 
@@ -54,4 +59,3 @@ use curl to add a new feed
 ```
 curl --request POST --data '{"url":"http://feeds.bbci.co.uk/news/video_and_audio/business/rss.xml"}'  http://localhost:3000/addFeed
 ```
-
