@@ -5,6 +5,7 @@ import (
 	"github.com/deltrinos/rss-api/app/conf"
 	"github.com/deltrinos/rss-api/interfaces"
 	"github.com/gin-gonic/gin"
+	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"net/http"
 	"os"
@@ -22,6 +23,7 @@ type Engine struct {
 func NewEngine(addr string) *Engine {
 	if conf.Env.IsProduction {
 		gin.SetMode(gin.ReleaseMode)
+		zerolog.SetGlobalLevel(zerolog.InfoLevel)
 	}
 
 	return &Engine{

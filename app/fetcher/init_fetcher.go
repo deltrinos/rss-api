@@ -19,9 +19,9 @@ func init() {
 		AddUrlWithDuration("http://feeds.reuters.com/reuters/technologyNews?format=xml", 2*time.Minute).
 
 		// add some french and chinese news rss
-		AddUrl("http://www.lefigaro.fr/rss/figaro_actualites.xml").
-		AddUrl("https://www.lemonde.fr/rss/une.xml").
-		AddUrl("https://www.scmp.com/rss/91/feed").
+		//AddUrl("http://www.lefigaro.fr/rss/figaro_actualites.xml").
+		//AddUrl("https://www.lemonde.fr/rss/une.xml").
+		//AddUrl("https://www.scmp.com/rss/91/feed").
 
 		// run fetcher cron
 		RunEvery(conf.Env.FetcherDuration, context.Background())
